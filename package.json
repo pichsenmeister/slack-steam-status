@@ -1,0 +1,22 @@
+{
+  "name": "stickers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "author": "David Pichsenmeister",
+  "license": "MIT",
+  "dependencies": {
+    "@slack/bolt": "^1.8.0",
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "firebase-admin": "^8.9.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
