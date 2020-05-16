@@ -25,6 +25,7 @@ This app uses the [Bolt for Slack](https://slack.dev/bolt/concepts) framework.
   - `SLACK_USER_TOKEN=<your Slack app's user token>`
   - `STEAM_API_KEY=<your Steam API key>`
   - `STEAM_ID=<your numeric Steam ID>`
+3. Create a cronjob (or something similar) that calls `/ping` to update your status  
 
 ## Remix on Glitch
 
