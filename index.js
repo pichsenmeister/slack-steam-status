@@ -18,6 +18,13 @@ const emojis = {
 
 const express = expressReceiver.app;
 
+express.get('/id', async (req, res) => {
+  const username = req.query.username
+  
+  const result = await axios.get(`https://api.steampowered.com/ISteamUser/ResolveVanityURL/v0001/?key=${process.env.STEAM_API_KEY}&vanityurl=${username}`)
+  return res.send(result.data.response.steamid)
+})
+
 // ping function to keep glitch alive
 express.get("/ping", async (req, res) => {
   console.log("<3");
@@ -30,8 +37,6 @@ express.get("/ping", async (req, res) => {
   }
 
   if (!gameInfo) {
-    
-    
     const status = await getSlackStatus();
     // only unset status if it's a game status
     if (isGameStatus(status)) await unsetStatus();
@@ -57,7 +62,6 @@ const getSlackStatus = async () => {
 };
 
 const unsetStatus = async () => {
-  console.log('unset status')
   await app.client.users.profile.set({
     token: process.env.SLACK_USER_TOKEN,
     profile: {
