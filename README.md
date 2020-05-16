@@ -25,3 +25,7 @@ This app uses the [Bolt for Slack](https://slack.dev/bolt/concepts) framework.
   - `SLACK_USER_TOKEN=<your Slack app's user token>`
   - `STEAM_API_KEY=<your Steam API key>`
   - `STEAM_ID=<your numeric Steam ID>`
+
+## Remix on Glitch
+
+[Remix on Glitch](https://glitch.com/edit/#!/remix/slack-steam-status)
